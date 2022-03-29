@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>CarRentalApp | asmaa</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body style="background-color: black">
+<div class="center">
+  <h1>Login</h1>
+  <div class="alert alert-danger" *ngIf="erreur==1">
+    <strong>Username ou password erronés</strong>
+  </div>
+  <form >
+
+    <div class="txt_field">
+      <input type="text" required name="username" [(ngModel)]="user.username">
+      <span></span>
+      <label>Username</label>
+    </div>
+
+    <div class="txt_field">
+      <input type="password" required name="password" [(ngModel)]="user.password">
+      <span></span>
+      <label>Password</label>
+    </div>
+    <div class="pass">Forgot Password?</div>
+    <input type="submit" style="background-color: #F8B739" value="Login" (click)="onLoggedin()" >
+
+
+    <div class="signup_link">
+      Not a member? <a href="#">Signup</a>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
